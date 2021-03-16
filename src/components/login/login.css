@@ -1,0 +1,69 @@
+/* LOGIN CONTAINER */
+.login-container{
+    height: 100vh;
+    position: relative;
+   
+}
+
+/* BACKGROUND FORM LOGIN */
+.bg-whatsapp{
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    width: 100%;
+    overflow: hidden;
+    border-radius: 0.5%;
+    box-shadow: 0 0 15px 2px rgb(110, 104, 104);
+
+}
+
+.bg-login{
+    height: 25vh;
+    width: 100%;
+    background-color: var(--primary);
+}
+.bg-login-2{
+    height: 60vh;
+    width: 100%;
+    background-color: #D8DBD5;
+}
+
+/* LOGIN FORM */
+
+.login-form{
+    background-color: var(--secondary);
+    width: 100%;
+    z-index: 10;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    width: 100%;
+}
+.register-form{
+    background-color: var(--secondary);
+    width: 100%;
+    z-index: 10;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    width: 100%;
+    opacity: 0;
+    transition: opacity .8s ease-in-out;
+}
+.show-register{
+    opacity: 1;
+}
+.button-login{
+    background-color: #5FB9B0;
+    border-radius: 5em;
+    border: none;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: all 0.1s ease-in-out;
+}
+.button-login:hover{
+    background-color: var(--primary);
+    
+}
