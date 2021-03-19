@@ -1,0 +1,29 @@
+/* SCROLL COVERSATIONS */
+::-webkit-scrollbar{
+    width: 5px;
+}
+::-webkit-scrollbar-track {
+    background: white;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #CCCCCC;
+}
+
+/* SLIDE EFFECT NEW FRIEND WINDOW */
+.new-friend-hidden{
+   transform: translateX(-100%);
+   position: absolute;
+   width: 100%;
+   z-index: 5;
+   transition: transform .3s ease-in;
+}
+.new-friend-show{
+    transform: translateX(0%);
+    width: 100%;
+    z-index: 5;
+}
+.active{
+    background-color: var(--fourth);
+}
+  

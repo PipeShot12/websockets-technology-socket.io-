@@ -1,21 +1,34 @@
 import React, { useState } from 'react';
 import Login from "./components/login/Login"
+import Chat from "./components/chat/Chat"
+import {ContactsProvider} from '../src/context/contactsContext'
+import { ConversationsProvider } from './context/conversationContext';
+import useLocalStorage from './useLocalStorage';
 import './App.css';
 
 function App() {
 
+
   const [logged, setlogged] = useState(false);
-
-  const isLoged = (state)=>{
-    setlogged(state);
+  const [id, setid] = useLocalStorage("id")
+  
+  const isLogged = (user,state)=>{
+    if(state){
+      setlogged(state);
+      setid(user.chatId); 
+    }
+    
   }
-
   if(logged) {
     return (
-        <h1>la app</h1>
+      <ContactsProvider>
+        <ConversationsProvider>
+          <Chat id={id}></Chat>
+        </ConversationsProvider>
+      </ContactsProvider>  
       )
   }else{
-    return <Login login={isLoged}></Login>
+    return <Login login={isLogged}></Login>
   }
 }
 
